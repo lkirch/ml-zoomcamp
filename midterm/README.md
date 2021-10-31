@@ -5,8 +5,10 @@ The Great Resignation, A Classification Problem
 
 With all of the talk of the Great Resignation in the news these days due to COVID-19 and general job dissatisfaction, I decided to examine whether a person quits their job or not.
 
+![I Quit](https://github.com/lkirch/ml-zoomcamp/tree/main/midterm/images/i-quit.jpeg?raw=true)
+
 ## Data
-Our dataset has 14,999 records with 9 independent variables and our dependent variable, whether or not someone quit.
+The dataset has 14,999 records with 9 independent variables and our dependent variable, whether or not someone quit. It can be found at [Original Dataset](https://github.com/VincentTatan/PythonAnalytics/blob/master/Youtube/dataset/HR_comma_sep.csv)
 
 *    employee satisfaction level
 *    last evaluation
