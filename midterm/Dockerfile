@@ -8,7 +8,7 @@ COPY ["Pipfile", "Pipfile.lock", "./"]
 
 RUN pipenv install --system --deploy
 
-COPY ["predict_quitting_serving.py", "rf_model.bin", "./"]
+COPY ["predict_quitting_serving.py", "--bind", "0.0.0.0:9696", "rf_model.bin", "./"]
 
 EXPOSE 9696
 
