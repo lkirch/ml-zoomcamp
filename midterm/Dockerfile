@@ -12,4 +12,4 @@ COPY ["predict_quitting_serving.py", "rf_model.bin", "./"]
 
 EXPOSE 9696
 
-ENTRYPOINT ["gunicorn", "--bind", "0.0.0.0:9696", "quitting:app"]
+ENTRYPOINT ["gunicorn", "--bind=0.0.0.0:9696", "quitting:app"]
