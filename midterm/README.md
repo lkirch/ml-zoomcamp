@@ -8,7 +8,7 @@ With all of the talk of the Great Resignation in the news these days due to COVI
 ![I Quit](https://github.com/lkirch/ml-zoomcamp/blob/main/midterm/images/i-quit.jpeg)
 
 ## Data
-The dataset has 14,999 records with 9 independent variables and our dependent variable, whether or not someone quit.  It can be found at [Original Dataset](https://github.com/VincentTatan/PythonAnalytics/blob/master/Youtube/dataset/HR_comma_sep.csv)
+The dataset has 14,999 records with 9 independent variables and our dependent variable, whether or not someone quit.  Here is the [Original Dataset](https://github.com/VincentTatan/PythonAnalytics/blob/master/Youtube/dataset/HR_comma_sep.csv)
 
 *    employee satisfaction level
 *    last evaluation
@@ -25,14 +25,14 @@ The dataset has 14,999 records with 9 independent variables and our dependent va
 ## Classification Models Used
 Given the binary nature of someone either quitting or not, we will use the following classification models to test our theory of whether or not someone will quit, given the above fields: 
 
-*   Logistic Regression
-*   Decision Trees
-*   Random Forest
-*   SVM
-*   XGBoost
+*   [Logistic Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
+*   [Decision Trees](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html)
+*   [Random Forest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
+*   [SVM](https://scikit-learn.org/stable/modules/svm.html)
+*   [XGBoost](https://xgboost.readthedocs.io/en/latest/python/index.html)
 
 ## Model Evaluation
-Also given the binary nature and the tendency for the majority of the samples to be imbalanced towards people not quitting, we will use Area Under the Receiver Operating Characteristic Curve (ROC AUC) from prediction scores, rather than accuracy as our evaluation metric.
+Also given the binary nature and the tendency for the majority of the samples to be imbalanced towards people not quitting, we will use [Area Under the Receiver Operating Characteristic Curve (ROC AUC)](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_auc_score.html) from prediction scores, rather than accuracy as our evaluation metric.
 
 ## Project Structure
 
