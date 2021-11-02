@@ -108,6 +108,7 @@ Or you can run a python script:
    pipenv run gunicorn --bind 0.0.0.0:9696 predict:app 
 ```
    * in another terminal window:
+```   
    python3 predict_test.py 
 ```
 
