@@ -65,4 +65,9 @@ Also given the binary nature and the tendency for the majority of the samples to
    * pipenv run gunicorn --bind 0.0.0.0:9696 predict:app (in one terminal window)
    * python3 predict_test.py (in another terminal window)
    * CTRL+C or CRTL+D to quit (_there might be a more graceful way, please let me know if you know_)
-* To build the docker image
+* To build the docker image in Google Cloud Shell
+   * Follow Ninad Date's very clear instructions found https://github.com/nindate/ml-zoomcamp-exercises/blob/main/how-to-use-google-cloud-shell-for-docker.md
+* To test it in Google Cloud Shell
+   * docker run --rm -d -p 8080:9696 lk-ml-zoomcamp
+   * docker ps -a (to be sure it is running)
+   * python3 request.py
