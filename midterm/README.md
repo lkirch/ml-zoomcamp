@@ -60,19 +60,22 @@ Also given the binary nature and the tendency for the majority of the samples to
  
 
 
-## How I Built the Pipenv on a Mac running BigSur - _steps 2,3,5 are only needed on a Mac_
-1. Created a directory called ml-zoomcamp-midterm
-2. source ~/.bash_profile  
-3. export PATH = "$PATH:/Users/lkirch/.local/bin"
-4. conda activate ml-zoomcamp
-5. export SYSTEM_VERSION_COMPAT=1  
-6. pip install --user pipenv
-7. pipenv install requests
-8. pipenv install scikit-learn==1.0
-9. pipenv install numpy
-10. pipenv install flask
-11. pipenv install gunicorn
-12. pipenv shell
+## How I Built the Pipenv on a Mac running BigSur
+_Note: steps 2,3,5 are only needed on a Mac_
+```
+   mkdir ml-zoomcamp-midterm
+   source ~/.bash_profile  
+   export PATH = "$PATH:/Users/lkirch/.local/bin"
+   conda activate ml-zoomcamp
+   export SYSTEM_VERSION_COMPAT=1  
+   pip install --user pipenv
+   pipenv install requests
+   pipenv install scikit-learn==1.0
+   pipenv install numpy
+   pipenv install flask
+   pipenv install gunicorn
+   pipenv shell
+```
 
 The python code is then run in pipenv.  To start up/activate your pipenv:
 ```
@@ -83,17 +86,17 @@ The python code is then run in pipenv.  To start up/activate your pipenv:
 
 If you just want to see the data wrangling, analysis and model selection process, run **notebook.ipynb** as you would a normal jupyter notebook.
 
-### To export the model and the DictVectorizer to a pickle file called rf_model.bin:
+#### To export the model and the DictVectorizer to a pickle file called rf_model.bin:
 ```
    python3 train.py
 ```
 
-### For testing, a standalone script called test_quitting.py will test the model without a web service:  
+#### For testing, a standalone script called test_quitting.py will test the model without a web service:  
 ```
    python3 test_quitting.py
 ```
 
-### To test the model with the flask/gunicorn webservice:
+#### To test the model with the flask/gunicorn webservice:
 You can run the notebook **will_this_employee_quit.ipynb**. while predict.py is running:
 ```
    python3 predict.py
@@ -108,8 +111,8 @@ Or you can run a python script:
 ```
 
 
-### To build the docker image in Google Cloud Shell (_you must have a gmail account_):
-   * Follow Ninad Date's very clear instructions found https://github.com/nindate/ml-zoomcamp-exercises/blob/main/how-to-use-google-cloud-shell-for-docker.md - _thank you, Ninad!_
+#### To build the docker image in Google Cloud Shell (_you must have a gmail account_):
+   * Follow [Ninad Date's very clear instructions](https://github.com/nindate/ml-zoomcamp-exercises/blob/main/how-to-use-google-cloud-shell-for-docker.md) - _thank you, Ninad!_
    * I uploaded Pipfile, Pipfile.lock, Dockerfile, rf_model.bin, predict.py request.py.
    * created a directory called app-deploy and moved the above files into it.
    * build the docker image
@@ -118,15 +121,15 @@ Or you can run a python script:
 ```   
    
    
-### To test the web service in Google Cloud Shell:
+#### To test the web service in Google Cloud Shell:
 ```
    docker run --rm -d -p 8080:9696 lk-ml-zoomcamp
    docker ps -a (_to be sure it is running_)
    python3 request.py
 ```
 
-### To deploy from Google Cloud Shell to heroku:
-  * Again follow Ninad Date's very clear instructions found https://github.com/nindate/ml-zoomcamp-exercises/blob/main/how-to-use-heroku.md - _thank you again, Ninad!_
+#### To deploy from Google Cloud Shell to heroku:
+  * Again follow [Ninad Date's very clear instructions](https://github.com/nindate/ml-zoomcamp-exercises/blob/main/how-to-use-heroku.md) - _thank you again, Ninad!_
   * Remove "--bind=0.0.0.0:9696" from the ENTRYPOINT in your Dockerfile
   * Install the heroku cli in google cloud shell: 
 ```
