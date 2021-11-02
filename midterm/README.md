@@ -52,12 +52,12 @@ Also given the binary nature and the tendency for the majority of the samples to
  * Dockerfile for running the service
 
 
-## How I Built the Pipenv on a Mac running BigSur
-* Created a directory called ml-zoomcamp-midterm
-* source ~/.bash_profile
-* export PATH = "$PATH:/Users/lkirch/.local/bin"
-* conda activate ml-zoomcamp
-* export SYSTEM_VERSION_COMPAT=1
+## How I Built the Pipenv on a Mac running BigSur - steps 2,3,5 are only needed for the Mac
+1. Created a directory called ml-zoomcamp-midterm
+2. source ~/.bash_profile  
+3. export PATH = "$PATH:/Users/lkirch/.local/bin"
+4. conda activate ml-zoomcamp
+5. export SYSTEM_VERSION_COMPAT=1  
 6. pip install --user pipenv
 7. pipenv install requests
 8. pipenv install scikit-learn==1.0
@@ -69,7 +69,7 @@ Also given the binary nature and the tendency for the majority of the samples to
 
 ## How to Run the Project
 
-* If you just want to see the data wrangling, analysis and model selection process, run notebook.ipynb has you would a normal jupyter notebook. _
+* If you just want to see the data wrangling, analysis and model selection process, run **notebook.ipynb** as you would a normal jupyter notebook.
 * Start up your pipenv shell
    * pipenv shell
 * The notebook was exported to a script called train.py
