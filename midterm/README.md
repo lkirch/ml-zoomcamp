@@ -61,7 +61,7 @@ Also given the binary nature and the tendency for the majority of the samples to
 
 
 ## How I Built the Pipenv on a Mac running BigSur
-_Note: steps 2,3,5 are only needed on a Mac_
+_Note: steps 2,3, and 5 are only needed on a Mac_
 ```
    mkdir ml-zoomcamp-midterm
    source ~/.bash_profile  
@@ -103,13 +103,13 @@ You can run the notebook **will_this_employee_quit.ipynb**. while predict.py is 
 ```
 
 Or you can run a python script:
+   * in one terminal window:
 ```
-   pipenv run gunicorn --bind 0.0.0.0:9696 predict:app (_in one terminal window_)
-   python3 predict_test.py (_in another terminal window_)
+   pipenv run gunicorn --bind 0.0.0.0:9696 predict:app 
 ```
-   CTRL+C or CRTL+D to quit (_there might be a more graceful way, please let me know if you know_)
+   * in another terminal window:
+   python3 predict_test.py 
 ```
-
 
 #### To build the docker image in Google Cloud Shell (_you must have a gmail account_):
    * Follow [Ninad Date's very clear instructions](https://github.com/nindate/ml-zoomcamp-exercises/blob/main/how-to-use-google-cloud-shell-for-docker.md) - _thank you, Ninad!_
