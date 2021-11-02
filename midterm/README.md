@@ -125,9 +125,6 @@ Or you can run a python script:
 #### To test the web service in Google Cloud Shell:
 ```
    docker run --rm -d -p 8080:9696 lk-ml-zoomcamp
-```
-To be sure the web service is running:
-```
    docker ps -a
    python3 request.py
 ```
@@ -139,8 +136,8 @@ To be sure the web service is running:
 ```
    curl https://cli-assets.heroku.com/install-ubuntu.sh | sh  
 ```
-  * In Heroku Account Settings > Applications > Create Authorization > type in heroku-api-gcp and copy the key you receive.
-  * In Google Cloud Shell
+  * In Heroku: Account Settings > Applications > Create Authorization > type in heroku-api-gcp and copy the key you receive.
+  * In Google Cloud Shell:
 ```
    export HEROKU_API_KEY="put_your_key_here"
    heroku container:login
