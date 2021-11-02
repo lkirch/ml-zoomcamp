@@ -52,7 +52,7 @@ Also given the binary nature and the tendency for the majority of the samples to
  * Dockerfile for running the service
 
 
-## How I Built the Pipenv on a Mac running BigSur - steps 2,3,5 are only needed for the Mac
+## How I Built the Pipenv on a Mac running BigSur - _steps 2,3,5 are only needed on a Mac_
 1. Created a directory called ml-zoomcamp-midterm
 2. source ~/.bash_profile  
 3. export PATH = "$PATH:/Users/lkirch/.local/bin"
@@ -66,34 +66,52 @@ Also given the binary nature and the tendency for the majority of the samples to
 11. pipenv install gunicorn
 12. pipenv shell
 
+The python code is then run in pipenv.  To start up/activate your pipenv:
+```
+   pipenv shell
+```
 
 ## How to Run the Project
 
 * If you just want to see the data wrangling, analysis and model selection process, run **notebook.ipynb** as you would a normal jupyter notebook.
-* Start up your pipenv shell
-   * pipenv shell
-* The notebook was exported to a script called train.py
-   * python3 train.py - runs and creates the rf_model.bin pickle file
-* For testing, a standalone script called test_quitting.py will test the model without a web service:  
-   * python3 test_quitting.py
-* To test the model with the flask/gunicorn webservice: 
-   * python3 predict.py and while predict.py is running, you can run the notebook will_this_employee_quit.ipynb
-   * pipenv run gunicorn --bind 0.0.0.0:9696 predict:app (in one terminal window)
-   * python3 predict_test.py (in another terminal window)
-   * CTRL+C or CRTL+D to quit (_there might be a more graceful way, please let me know if you know_)
-* To build the docker image in Google Cloud Shell
-   * Follow Ninad Date's very clear instructions found https://github.com/nindate/ml-zoomcamp-exercises/blob/main/how-to-use-google-cloud-shell-for-docker.md
-* To test it in Google Cloud Shell
-   * docker run --rm -d -p 8080:9696 lk-ml-zoomcamp
-   * docker ps -a (to be sure it is running)
-   * python3 request.py
 
+### To export the model and the DictVectorizer to a pickle file called rf_model.bin:
+```
+   python3 train.py
+```
+
+### For testing, a standalone script called test_quitting.py will test the model without a web service:  
+```
+   python3 test_quitting.py
+```
+
+### To test the model with the flask/gunicorn webservice:
+```
+   python3 predict.py 
+   * and while predict.py is running, you can run the notebook **will_this_employee_quit.ipynb**
+   pipenv run gunicorn --bind 0.0.0.0:9696 predict:app (_in one terminal window_)
+   python3 predict_test.py (_in another terminal window_)
+   CTRL+C or CRTL+D to quit (_there might be a more graceful way, please let me know if you know_)
+```
+   
+### To build the docker image in Google Cloud Shell:
+   * Follow Ninad Date's very clear instructions found https://github.com/nindate/ml-zoomcamp-exercises/blob/main/how-to-use-google-cloud-shell-for-docker.md - _thank you Ninad!_
+   * I uploaded Pipfile, Pipfile.lock, Dockerfile, rf_model.bin, predict.py request.py
+   
+   
+### To test it in Google Cloud Shell
+```
+   docker run --rm -d -p 8080:9696 lk-ml-zoomcamp
+   docker ps -a (_to be sure it is running_)
+   python3 request.py
+```
 
 ## Enhancements/Next Steps
 
 - [ ] Gather more recent data and perhaps more data.  There may be additional features that affect whether someone quits since the data was collected.  I believe the data was from only one company, so gathering data from multiple companies would also be interesting.
+- [ ] Additional graphs comparing the feature importance by type of model.
 - [ ] Try additional models and model tuning to see if that improves the final model.
 - [ ] Try some sampling methods to see if that improves the final model.
 - [ ] More automated modeling experiments, such as GridSearchCV.
-- [ ] More test cases.
+- [ ] More test cases and error handling if someone submits the employee request incorrectly.  Currently, it just fails.
 - [ ] A more elaborate test web page, so you know heroku is working.
