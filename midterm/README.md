@@ -125,7 +125,10 @@ Or you can run a python script:
 #### To test the web service in Google Cloud Shell:
 ```
    docker run --rm -d -p 8080:9696 lk-ml-zoomcamp
-   docker ps -a (_to be sure it is running_)
+```
+To be sure the web service is running:
+```
+   docker ps -a
    python3 request.py
 ```
 
