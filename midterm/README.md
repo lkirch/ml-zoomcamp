@@ -47,15 +47,31 @@ Also given the binary nature and the tendency for the majority of the samples to
  * Script predict.py
       * Loading the model
       * Serving it via a web serice (e.g. with Flask)
- * Pipenv and Pipenv.lock (Pipfile and Pipfile.lock)
+ * Pipfile and Pipfile.lock
       * or equivalents: conda environment file, requirements.txt or pyproject.toml
  * Dockerfile for running the service
 
 
+## How I Built the Pipenv on a Mac running BigSur
+* Created a directory called ml-zoomcamp-midterm
+* source ~/.bash_profile
+* export PATH = "$PATH:/Users/lkirch/.local/bin"
+* conda activate ml-zoomcamp
+* export SYSTEM_VERSION_COMPAT=1
+6. pip install --user pipenv
+7. pipenv install requests
+8. pipenv install scikit-learn==1.0
+9. pipenv install numpy
+10. pipenv install flask
+11. pipenv install gunicorn
+12. pipenv shell
+
+
 ## How to Run the Project
 
-* The notebook.ipynb has the data preparation, exploratory analysis and model selection process. Run as you would a normal jupyter notebook. _Note: The last part of the notebook will export the model as pickel file.  You can skip this if you prefer to run the train.py script instead._  
+* If you just want to see the data wrangling, analysis and model selection process, run notebook.ipynb has you would a normal jupyter notebook. _
 * Start up your pipenv shell
+   * pipenv shell
 * The notebook was exported to a script called train.py
    * python3 train.py - runs and creates the rf_model.bin pickle file
 * For testing, a standalone script called test_quitting.py will test the model without a web service:  
@@ -71,3 +87,13 @@ Also given the binary nature and the tendency for the majority of the samples to
    * docker run --rm -d -p 8080:9696 lk-ml-zoomcamp
    * docker ps -a (to be sure it is running)
    * python3 request.py
+
+
+## Enhancements/Next Steps
+
+- [ ] Gather more recent data and perhaps more data.  There may be additional features that affect whether someone quits since the data was collected.  I believe the data was from only one company, so gathering data from multiple companies would also be interesting.
+- [ ] Try additional models and model tuning to see if that improves the final model.
+- [ ] Try some sampling methods to see if that improves the final model.
+- [ ] More automated modeling experiments, such as GridSearchCV.
+- [ ] More test cases.
+- [ ] A more elaborate test web page, so you know heroku is working.
