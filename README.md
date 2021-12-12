@@ -11,3 +11,5 @@ wk-5 contains a deployment of a customer churn model
 wk-9 contains serverless deep learning 
 
 midterm contains the deployment for an employee quitting model
+
+final contains the work for a fire prediction model and deployment
