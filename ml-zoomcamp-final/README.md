@@ -45,7 +45,7 @@ ml-zoomcamp-final
 │   README.md - describes the project and how to run it
 │   00-prepare-random-sample.py - script to run once to get a sample of 20%
 │   ml-zoomcamp-final.ipynb - EDA, parameter tuning, model selection
-│   lambda-function.py 
+│   lambda-function.py - script for serverless AWS lambda function
 │   train.py - trains a selected model and saves it
 │   local-test.py - reads the saved model and tests a prediction
 │   predict.py - loads the model and serves it via flask
@@ -116,12 +116,19 @@ In addition, transfer learning was applied using MobileNetV2 and Xception.
    pipenv install keras-image-helper
 ```
 
-### To Run 00-prepare-random-sample.py
-Run this once before running the jupyter notebook ml-zoomcamp-final.ipynb
+### To run train.py
+train.py - creates a script from one of the models from our jupyter notebook and coverts the model to tflite.
+![train script](images/train.png)
 
+### To run local-test.py
+This just reads a saved model and tests a prediction.
+![local test](images/local-test.png)
 
+### To test lambda_function.py
+To test the script for serverless AWS lambda function:
+1. just testing the script
+![test lambda function 1](images/lambda_function1.png)
+2. now testing the lambda_function with an event
+![test lambda function 2](images/lambda_function2.png)
 
-
-* Deployment
-  * URL to the service your deployed or 
-  * Video or image of how you interact with the deployed service
+*Note: Use ```import tensorflow.lite as tflite``` when testing locally, but switch to ```import tflite_runtime.interpreter as tflite``` for deployment.*
