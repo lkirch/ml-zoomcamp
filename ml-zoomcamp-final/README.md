@@ -19,20 +19,21 @@ For testing this project, you can give it an image and it will determine if it's
 <a id='dataset'></a>
 ## 2. Data Set
 The original data came from the Fire Detection Dataset by Ritu Pande from Kaggle
-https://www.kaggle.com/ritupande/fire-detection-from-cctv
+https://www.kaggle.com/ritupande/fire-detection-from-cctv.  There are both still images and video.  Only the still images were used for this project.
 
 This data is taken from closed circuit tv cameras to determine:
-1. things are normal (default) 
-2. things are on fire
-3. smoke is detected
+  1. things are normal (default) 
+  2. things are on fire
+  3. smoke is detected
 
-There are 864 still images.
+There are 864 still images.  Their size is approximately 32 KB each in 224 x 224.
 
 <a id='data-prep'></a>
 ## 3. Setting Up the Data Structure
-1. Download the data from https://www.kaggle.com/ritupande/fire-detection-from-cctv/download.  I stored this in original-data.
+1. Download the data from https://www.kaggle.com/ritupande/fire-detection-from-cctv/download.  I stored this in /original-data.
 2. Unzip the archive.zip file.  We do not need the video data for this project.  
 3. For some reason, when you unzip the archive.zip file, it creates a recursive directory structure. Copy just the img_data to /data and run 00-prepare-random-sample.py to select a random 20% of the training data to be our validation data.  Or you can just move the images in your file system manually - just make sure there is a set of val directories and they have about 20% of the files in them.
+![prepare random sample](images/00-prepare-random-sample.png)
 
 *Note: If you run the 00-prepare-random-sample.py more than once, it will keep moving 20% of the training files to your validation directory.*
 
@@ -112,8 +113,14 @@ In addition, transfer learning was applied using MobileNetV2 and Xception.
    pipenv install flask
    pipenv install gunicorn
    pipenv install tensorflow-hub
-   pipenv shell
+   pipenv install keras-image-helper
 ```
+
+### To Run 00-prepare-random-sample.py
+Run this once before running the jupyter notebook ml-zoomcamp-final.ipynb
+
+
+
 
 * Deployment
   * URL to the service your deployed or 
