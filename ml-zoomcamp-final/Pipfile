@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+numpy = "*"
+pandas = "*"
+requests = "*"
+scikit-learn = "==1.0"
+scikit-image = "*"
+tensorflow = "*"
+flask = "*"
+gunicorn = "*"
+tensorflow-hub = "*"
+keras-image-helper = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
