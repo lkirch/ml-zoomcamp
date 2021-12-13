@@ -49,7 +49,7 @@ ml-zoomcamp-final
 │   train.py - trains a selected model and saves it
 │   local-test.py - reads the saved model and tests a prediction
 │   predict.py - loads the model and serves it via flask
-│   test.py - 
+│   test.py - to test the dockerfile locally
 │   Pipfile - which packages and versions you will need for this project
 │   Pipefile.lock
 │   Dockerfile - to run the service
@@ -118,6 +118,7 @@ In addition, transfer learning was applied using MobileNetV2 and Xception.
 
 ### To run train.py
 train.py - creates a script from one of the models from our jupyter notebook and coverts the model to tflite.
+
 ![train script](images/train.png)
 
 ### To run local-test.py
@@ -127,8 +128,27 @@ This just reads a saved model and tests a prediction.
 ### To test lambda_function.py
 To test the script for serverless AWS lambda function:
 1. just testing the script
+
 ![test lambda function 1](images/lambda_function1.png)
+
 2. now testing the lambda_function with an event
+
 ![test lambda function 2](images/lambda_function2.png)
 
 *Note: Use ```import tensorflow.lite as tflite``` when testing locally, but switch to ```import tflite_runtime.interpreter as tflite``` for deployment.*
+
+### To run predict.py
+To test locally, comment in the url and then run using ```python3 predict.py```.
+Comment out the url when getting ready to deploy.
+
+### To build the Dockerfile
+
+![build dockerfile](images/build-dockerfile.png)
+
+### To run the Dockerfile
+
+![run dockerfile](images/run-dockerfile.png)
+
+### To test the Dockerfile locally
+
+![test dockerfile](images/test-dockerfile.png)
