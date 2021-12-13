@@ -1,6 +1,7 @@
 ## ML Zoomcamp Capstone Project - December 2021
 
 # Is It on Fire?
+
 <a id='desc'></a>
 ## Problem Description
 Being able to identify a problem situation early can be beneficial and prevent harm.  With all the video and still footage taken by security cameras we can use these images to train a model to automatically detect (classify) situations where everything is fine, where there is smoke or where there is an actual fire.  This helps us react quicker to potential disasters.
@@ -12,6 +13,7 @@ For testing this project, you can give it an image and it will determine the pro
 
 ![normal](data/img_data/train/default/img_3.jpg "Normal") ![on fire](data/img_data/train/fire/img_88.jpg "On Fire") ![smoke](data/img_data/train/smoke/img_7.jpg "Smoke")               
 
+
 ## Table of Contents
 * [Problem Description](#desc)
 * [Data](#data)
@@ -20,7 +22,8 @@ For testing this project, you can give it an image and it will determine the pro
 * [Project Structure](#project-struct)
 * [Setting Up the Data Structure](#data-prep)
 * [Model Deployment](#model-deployment)
-* [Enhancements/To Do](#todo)
+* [Enhancements/To Do](#enhancements)
+
 
 <a id='data'></a>
 ## Data
@@ -264,8 +267,13 @@ Comment out the url when getting ready to deploy.
       
        
        
-<a id='todo'></a>
+<a id='enhancements'></a>
 ## Enhancements/To Do   
-   
-   
-  
+
+- [ ] Use more images for training
+- [ ] Remove backgrounds from images
+- [ ] Try tuning other hyperparameters for the models, perhaps try keras_tuner.  There are so many possibilites we could have tried if we had more time
+- [ ] Try experimenting with the layers, filters, strides, and padding more
+- [ ] Debug why the shape issue when evaluating the transfer models on test data.  Most internet examples show it working on train and validation, but not on test.
+- [ ] Try using the video images
+- [ ] Work with satellite images and geo-location information for fire detection
