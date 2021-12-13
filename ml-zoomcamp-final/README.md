@@ -232,7 +232,9 @@ Comment out the url when getting ready to deploy.
       
        ![post method](images/post-method.png)
        
-      * Click on Test 
+      * Click on Test to try running a test
+      
+      ![test lambda function](images/test-lambda-function.png)
        
        
    
