@@ -232,7 +232,7 @@ Comment out the url when getting ready to deploy.
       
        ![post method](images/post-method.png)
        
-      * Click on Test to try running a test
+      * Click on Test to try running a test on AWS to test your Lambda function
       
       ![test lambda function](images/test-lambda-function.png)
       
@@ -240,10 +240,18 @@ Comment out the url when getting ready to deploy.
       
       ![deploy api](images/deploy-api.png)
       
-      You should see your lambda function
+      You should see your lambda function and the URL to test from outside the AWS Console
       
       ![test stage editor](images/test-stage-editor.png)
       
+   7. Testing Your Lambda Function with test.py
+   
+      Modify your localhost url to point to the url for the AWS Lambda function
+      
+      ![test remote aws lambda function](images/test-remote-aws-lambda-function.png)
+      
+      
+      ![remote lambda test results](images/remote-lambda-test-results.png)
       
        
        
