@@ -18,7 +18,7 @@ Being able to identify a problem situation early can be beneficial and prevent h
 
 This type of classification could be applied to many topics, such as which kind of microplastic is in the water, land type use, and identifying invasive species.
 
-For testing this project, you can give it an image and it will determine if it's normal, there's fire or there's smoke.  While you would not want to do that for a lot of images, the idea is that you could build the model with some additional automation to be able to routinely scan images to detect fire.
+For testing this project, you can give it an image and it will determine the probability the image is normal, there is a fire or there is smoke.  While you would not want to do that for a lot of images, the idea is that you could build the model with some additional automation to be able to routinely scan images to detect fire.
 
 <a id='data'></a>
 ## 2. Data
