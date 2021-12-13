@@ -39,7 +39,7 @@ Only the still images were used for this project.  There are 864 still images.  
 
 <a id='models'></a>
 ## Classification Models Used
-As an image classification problem, Neural Nets with different optimizers, learning rates, momentum, dropout rates, numbers of convolutional layers, and numbers of Dense layers were tried.
+As an image classification problem, [Neural Nets](https://en.wikipedia.org/wiki/Artificial_neural_network) with different optimizers, learning rates, momentum, dropout rates, numbers of convolutional layers, and numbers of Dense layers were tried.
 
 In addition, transfer learning was applied using [MobileNetV2](https://keras.io/api/applications/mobilenet/) and [Xception](https://keras.io/api/applications/xception/).
 
