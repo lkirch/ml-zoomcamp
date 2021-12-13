@@ -1,4 +1,4 @@
-## ML Zoomcamp Capstone Project
+## ML Zoomcamp Capstone Project - Is It on Fire?
 
 ## Table of Contents
 * [1. Problem Description](#desc)
@@ -96,7 +96,7 @@ ml-zoomcamp-final
 ## 5. Models Used
 As an image classification problem, Neural Nets with different optimizers, learning rates, momentum, dropout rates, numbers of convolutional layers, and numbers of Dense layers were tried.
 
-In addition, transfer learning was applied using MobileNetV2 and Xception.
+In addition, transfer learning was applied using [MobileNetV2](https://keras.io/api/applications/mobilenet/) and [Xception](https://keras.io/api/applications/xception/).
 
 <a id='model-deployment'></a>
 ## 6. Model Deployment
@@ -131,7 +131,7 @@ To test the script for serverless AWS lambda function:
 
 ![test lambda function 1](images/lambda_function1.png)
 
-2. now testing the lambda_function with an event
+2. testing the lambda_function with an event
 
 ![test lambda function 2](images/lambda_function2.png)
 
@@ -164,5 +164,22 @@ Comment out the url when getting ready to deploy.
    5. Execute ```$(aws ecr get-login --no-include-email)```
    6. Tag your latest docker image
    ![tag docker image](images/tag-docker-image.png)
-   7. Push your docker image to ECR
+   7. Push your docker image to ECR  
    ```docker push ${REMOTE_URI}```
+   
+### To define an AWS Lambda Function
+   1. Login to the AWS Console and search for Lambda
+   2. Create Function
+   ![create function](images/create-function.png)
+   3. Select Container Image
+   ![create function container image](images/create-function-container-image.png)
+    You should be able to see your private repository that you just pushed to ECR, select that
+   ![see repository](images/see-repository.png)
+   ![select container image](images/select-container-image.png)
+   You should now see your lambda function
+   ![fire classification](images/fire-classification.png)
+   4. Create a test for your lambda function by clicking on the Test tab
+   ![test fire classification](images/test-fire-classification.png)
+   5. Edit your test settings to Memory 1024 MB and 30 seconds for the time out
+   ![edit settings](images/edit-settings.png)
+  
