@@ -206,17 +206,35 @@ Comment out the url when getting ready to deploy.
    ![name test event](images/name-test-event.png)
    
    6. Exposing the Lambda Function
-      1. From the AWS Console search for API Gateway
+      * From the AWS Console search for API Gateway
    
       ![api gateway](images/api-gateway.png)
    
-      2. Select REST API
+      * Select REST API
    
       ![rest api](images/rest-api.png)
    
-      3. Choose the Protocol
+      * Choose the Protocol
       
-      [choose protocol](images/choose-protocol.png)
+      ![choose protocol](images/choose-protocol.png)
+      
+      * Select Actions, then Create Resource from the dropdown 
+      
+      ![create resource](images/create-resource.png)
+      
+      * Select Actions, then Create Method from the dropdown
+      
+      ![create method](images/create-method.png)
+      
+      * Click OK on Add Permission to Lambda Function
+      
+      * Create a Post Method
+      
+       ![post method](images/post-method.png)
+       
+      * Click on Test 
+       
+       
    
    
    
