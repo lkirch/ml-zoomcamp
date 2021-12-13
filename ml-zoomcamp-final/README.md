@@ -2,14 +2,7 @@
 
 # Is It on Fire?
 
-Normal                     | On Fire                  | Smoke
-:-------------------------:|:-------------------------:-------------------------:
-![normal](data/img_data/train/default/img_3.jpg)   |![fire](data/img_data/train/fire/img_88.jpg) |![smoke](data/img_data/train/smoke/img_7.jpg)
-
-![normal](data/img_data/train/default/img_3.jpg "Normal") ![on fire](data/img_data/train/fire/img_88.jpg "On Fire") ![smoke](data/img_data/train/smoke/img_7.jpg "Smoke")
-
-               
-               
+![normal](data/img_data/train/default/img_3.jpg "Normal") ![on fire](data/img_data/train/fire/img_88.jpg "On Fire") ![smoke](data/img_data/train/smoke/img_7.jpg "Smoke")               
 
 ## Table of Contents
 * [1. Problem Description](#desc)
