@@ -235,6 +235,16 @@ Comment out the url when getting ready to deploy.
       * Click on Test to try running a test
       
       ![test lambda function](images/test-lambda-function.png)
+      
+      * Select Actions, then Deploy API from the dropdown
+      
+      ![deploy api](images/deploy-api.png)
+      
+      You should see your lambda function
+      
+      ![test stage editor](images/test-stage-editor.png)
+      
+      
        
        
    
