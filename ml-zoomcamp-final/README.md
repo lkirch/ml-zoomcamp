@@ -170,16 +170,28 @@ Comment out the url when getting ready to deploy.
 ### To define an AWS Lambda Function
    1. Login to the AWS Console and search for Lambda
    2. Create Function
+   
    ![create function](images/create-function.png)
+   
    3. Select Container Image
+   
    ![create function container image](images/create-function-container-image.png)
+   
     You should be able to see your private repository that you just pushed to ECR, select that
+    
    ![see repository](images/see-repository.png)
+   
    ![select container image](images/select-container-image.png)
+   
    You should now see your lambda function
+   
    ![fire classification](images/fire-classification.png)
+   
    4. Create a test for your lambda function by clicking on the Test tab
+   
    ![test fire classification](images/test-fire-classification.png)
+   
    5. Edit your test settings to Memory 1024 MB and 30 seconds for the time out
+   
    ![edit settings](images/edit-settings.png)
   
