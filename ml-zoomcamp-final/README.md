@@ -85,10 +85,10 @@ ml-zoomcamp-final
 │       │    └───smoke
 │       │    │   img_23.jpg
 │       │    │   ...
-└───images
-└───models
+└───images - images used in the readme and jupyter notebooks
+└───models - saved models
 └───original-data
-│       │    archive.zip
+│       └───archive.zip
 
 ```
 
@@ -152,3 +152,17 @@ Comment out the url when getting ready to deploy.
 ### To test the Dockerfile locally
 
 ![test dockerfile](images/test-dockerfile.png)
+
+![successful test of local dockerfile](images/successful-test.png)
+
+### To publish the Dockerfile to Amazon's Elastic Container Registry (ECR)
+   1. If you do not already have awscli, install it using ```pip install awscli```
+   2. If this is your first time using a repository, you will need to run ```aws configure```.  It will ask you for your AWS Access ID, your AWS Secret Access Key, your default region name, and the default output format you would like to use.  If you do not have the keys, please follow the instructions at https://aws.amazon.com/premiumsupport/knowledge-center/create-access-key/
+   3. Name your ECR repository
+   ```aws ecr create-repository --repository-name fire-prediction-tflite-images```
+   4. You will need to login (we will obfuscate the password and set it as an environment variable)![obfuscate password](images/obfuscate-password.png)
+   5. Execute ```$(aws ecr get-login --no-include-email)```
+   6. Tag your latest docker image
+   ![tag docker image](images/tag-docker-image.png)
+   7. Push your docker image to ECR
+   ```docker push ${REMOTE_URI}```
