@@ -1,9 +1,20 @@
-## ML Zoomcamp Capstone Project - Is It on Fire?
+## ML Zoomcamp Capstone Project - December 2021
+
+# Is It on Fire?
+
+Normal                     | On Fire                  | Smoke
+:-------------------------:|:-------------------------:-------------------------:
+![normal](data/img_data/train/default/img_3.jpg)   |![fire](data/img_data/train/fire/img_88.jpg) |![smoke](data/img_data/train/smoke/img_7.jpg)
+
+![normal](data/img_data/train/default/img_3.jpg "Normal") ![on fire](data/img_data/train/fire/img_88.jpg "On Fire") ![smoke](data/img_data/train/smoke/img_7.jpg "Smoke")
+
+               
+               
 
 ## Table of Contents
 * [1. Problem Description](#desc)
-* [2. Data Set](#dataset)
-* [3. Data Preparation](#data-prep)
+* [2. Data](#data)
+* [3. Setting Up the Data Structure](#data-prep)
 * [4. Project Structure](#project-struct)
 * [5. Models Used](#models)
 * [6. Model Deployment](#model-deployment)
@@ -16,17 +27,17 @@ This type of classification could be applied to many topics, such as which kind 
 
 For testing this project, you can give it an image and it will determine if it's normal, there's fire or there's smoke.  While you would not want to do that for a lot of images, the idea is that you could build the model with some automation to be able to routinely scan images to detect fire.
 
-<a id='dataset'></a>
-## 2. Data Set
-The original data came from the Fire Detection Dataset by Ritu Pande from Kaggle
-https://www.kaggle.com/ritupande/fire-detection-from-cctv.  There are both still images and video.  Only the still images were used for this project.
+<a id='data'></a>
+## 2. Data
+The original data, which includes both still images and video, came from the Fire Detection Dataset by Ritu Pande via Kaggle
+https://www.kaggle.com/ritupande/fire-detection-from-cctv.  
 
 This data is taken from closed circuit tv cameras to determine:
   1. things are normal (default) 
   2. things are on fire
   3. smoke is detected
 
-There are 864 still images.  Their size is approximately 32 KB each in 224 x 224.
+Only the still images were used for this project.  There are 864 still images.  Their size is approximately 32 KB each in 224 x 224.
 
 <a id='data-prep'></a>
 ## 3. Setting Up the Data Structure
