@@ -168,7 +168,9 @@ Comment out the url when getting ready to deploy.
    ```docker push ${REMOTE_URI}```
    
 ### To define an AWS Lambda Function
+
    1. Login to the AWS Console and search for Lambda
+   
    2. Create Function
    
    ![create function](images/create-function.png)
@@ -191,7 +193,27 @@ Comment out the url when getting ready to deploy.
    
    ![test fire classification](images/test-fire-classification.png)
    
-   5. Edit your test settings to Memory 1024 MB and 30 seconds for the time out
+   5. Edit your test settings to Memory 1024 MB and 30 seconds for the time out and give your event a name (don't forget to Save)
    
    ![edit settings](images/edit-settings.png)
+   
+   ![successful lambda test](image/successful-lambda-test.png)
+   
+   ![name test event](image/name-test-event.png)
+   
+   6. Exposing the Lambda Function
+      1. From the AWS Console search for API Gateway
+   
+      ![api gateway](image/api-gateway.png)
+   
+      2. Select REST API
+   
+      ![rest api](image/rest-api.png)
+   
+      3. Choose the Protocol
+      
+      [choose protocol](image/choose-protocol.png)
+   
+   
+   
   
