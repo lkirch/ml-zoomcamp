@@ -14,11 +14,11 @@
 
 <a id='desc'></a>
 ## 1. Problem Description
-Being able to identify a problem situation early can be beneficial and prevent harm.  With all the video and still footage taken by security cameras we can use these images to train a model to automatically detect (classify) situations where everything is fine, where there is smoke or where there is an actual fire.
+Being able to identify a problem situation early can be beneficial and prevent harm.  With all the video and still footage taken by security cameras we can use these images to train a model to automatically detect (classify) situations where everything is fine, where there is smoke or where there is an actual fire.  This helps us react quicker to potential disasters.
 
 This type of classification could be applied to many topics, such as which kind of microplastic is in the water, land type use, and identifying invasive species.
 
-For testing this project, you can give it an image and it will determine if it's normal, there's fire or there's smoke.  While you would not want to do that for a lot of images, the idea is that you could build the model with some automation to be able to routinely scan images to detect fire.
+For testing this project, you can give it an image and it will determine if it's normal, there's fire or there's smoke.  While you would not want to do that for a lot of images, the idea is that you could build the model with some additional automation to be able to routinely scan images to detect fire.
 
 <a id='data'></a>
 ## 2. Data
@@ -201,22 +201,22 @@ Comment out the url when getting ready to deploy.
    
    ![edit settings](images/edit-settings.png)
    
-   ![successful lambda test](image/successful-lambda-test.png)
+   ![successful lambda test](images/successful-lambda-test.png)
    
-   ![name test event](image/name-test-event.png)
+   ![name test event](images/name-test-event.png)
    
    6. Exposing the Lambda Function
       1. From the AWS Console search for API Gateway
    
-      ![api gateway](image/api-gateway.png)
+      ![api gateway](images/api-gateway.png)
    
       2. Select REST API
    
-      ![rest api](image/rest-api.png)
+      ![rest api](images/rest-api.png)
    
       3. Choose the Protocol
       
-      [choose protocol](image/choose-protocol.png)
+      [choose protocol](images/choose-protocol.png)
    
    
    
