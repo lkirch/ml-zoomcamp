@@ -45,7 +45,7 @@ In addition, transfer learning was applied using [MobileNetV2](https://keras.io/
 
 <a id='model-eval'></a>
 ## Model Evaluation
-Since we have a pretty balanced data set, I decided to stick with accuracy for validating the models.  If it had been an imbalanced data set, I would have used [Area Under the Receiver Operating Characteristic Curve (ROC AUC)](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_auc_score.html) from prediction scores, rather than accuracy as our evaluation metric.
+Since we have a pretty balanced data set, we used accuracy for validating the models.  
 
 <a id='project-struct'></a>
 ## Project Structure
@@ -271,6 +271,5 @@ Comment out the url when getting ready to deploy.
 - [ ] Remove backgrounds from images
 - [ ] Try tuning other hyperparameters for the models, perhaps try keras_tuner.  There are so many possibilites we could have tried if we had more time.
 - [ ] Try experimenting with the layers, filters, strides, and padding more
-- [ ] Debug why the shape issue when evaluating the transfer models on test data.  Most internet examples show it working on train and validation, but not on test.
 - [ ] Try using the video images
 - [ ] Work with satellite images and geo-location information for fire detection
